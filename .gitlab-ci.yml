@@ -1,8 +1,8 @@
 pages:
   script:
-    - mkdir public
-    - cp -r * public/
-    - rm -rf public/public
+    - mkdir .temp
+    - cp -r . !(.temp) .temp/ || cp -r * .temp/
+    - mv .temp public
   artifacts:
     paths:
       - public
