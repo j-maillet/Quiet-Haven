@@ -1,8 +1,8 @@
 pages:
   script:
-    - mkdir .temp
-    - cp -r . !(.temp) .temp/ || cp -r * .temp/
-    - mv .temp public
+    - mkdir public
+    - cp index.html public/
+    - cp -r Image styles.css public/ || echo "Pas d'image ou css"
   artifacts:
     paths:
       - public
