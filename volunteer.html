@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,7 +15,7 @@
 	<body>
 		<header>
 			<a href="index.html" class="logo-container">
-				<img src="Image/Logo.png" alt="Logo" width="90" height="90">
+				<img src="Image/Logo.png" alt="Logo The Quiet Haven" width="90" height="90">
 				<h1>The Quiet Haven</h1>
 			</a>
 
@@ -36,7 +36,11 @@
 			<div class="glass-card" style="max-width: 600px;">
 				<h2>Join the Quiet Haven Team</h2>
 				<p style="text-align: center;">We are always looking for <strong>empathetic students</strong> to help us maintain our safe space.</p>
+				<p style="text-align: center; font-size: 0.95rem; color: var(--secondary-blue); font-style: italic;">
+					No prior experience needed — just a genuine desire to create a welcoming and respectful atmosphere for others.
+				</p>
 
+				<!-- Note: form currently points to a debug endpoint for testing purposes -->
 				<form action="https://perso.liris.cnrs.fr/pierre-antoine.champin/enseignement/intro-web/_static/formproc/debug"> 
 					
 					<label for="firstname">First Name</label>
@@ -82,7 +86,7 @@
 					</div>
 
 					<label for="why">Why do you want to help us?</label>
-					<textarea id="why" name="why" rows="4" placeholder="Explain in a few sentences..." required></textarea>
+					<textarea id="why" name="why" rows="4" maxlength="1000" placeholder="Explain in a few sentences..." required></textarea>
 				
 					<button type="submit" class="submit-button">Send Application</button>
 				</form> 
