@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Volunteer at The Quiet Haven and help us support students.">
+		<title>Volunteer - The Quiet Haven</title>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="styles.css">
+	</head>
+	<body>
+		<header>
+			<a href="index.html" class="logo-container">
+				<img src="Image/Logo.png" alt="Logo" width="90" height="90">
+				<h1>The Quiet Haven</h1>
+			</a>
+
+			<input type="checkbox" id="menu-toggle" class="menu-checkbox">
+			<label for="menu-toggle" class="menu-icon">&#9776;</label>
+
+			<nav>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="mission.html">Our Mission & Concept</a></li>
+					<li><a href="blog.html">Project Timeline</a></li>
+					<li>Volunteer</li>
+				</ul>
+			</nav>
+		</header>
+		
+		<main class="centered-layout">
+			<div class="glass-card" style="max-width: 600px;">
+				<h2>Join the Quiet Haven Team</h2>
+				<p style="text-align: center;">We are always looking for <strong>empathetic students</strong> to help us maintain our safe space.</p>
+
+				<form action="https://perso.liris.cnrs.fr/pierre-antoine.champin/enseignement/intro-web/_static/formproc/debug"> 
+					
+					<label for="firstname">First Name</label>
+					<input type="text" id="firstname" name="firstname" required>
+
+					<label for="lastname">Last Name</label>
+					<input type="text" id="lastname" name="lastname" required>
+
+					<label for="email">Student Email</label>
+					<input type="email" id="email" name="email" required>
+
+					<label>When are you available?</label>
+					<div class="checkbox-group">
+						<div class="checkbox-item">
+							<input type="checkbox" id="monday" name="availability" value="Monday">
+							<label for="monday">Monday</label>
+						</div>
+
+						<div class="checkbox-item">
+							<input type="checkbox" id="tuesday" name="availability" value="Tuesday">
+							<label for="tuesday">Tuesday</label>
+						</div>
+
+						<div class="checkbox-item">
+							<input type="checkbox" id="wednesday" name="availability" value="Wednesday">
+							<label for="wednesday">Wednesday</label>
+						</div>
+
+						<div class="checkbox-item">
+							<input type="checkbox" id="thursday" name="availability" value="Thursday">
+							<label for="thursday">Thursday</label>
+						</div>
+
+						<div class="checkbox-item">
+							<input type="checkbox" id="friday" name="availability" value="Friday">
+							<label for="friday">Friday</label>
+						</div>
+
+						<div class="checkbox-item">
+							<input type="checkbox" id="weekend" name="availability" value="Weekend">
+							<label for="weekend">Weekends</label>
+						</div>
+					</div>
+
+					<label for="why">Why do you want to help us?</label>
+					<textarea id="why" name="why" rows="4" placeholder="Explain in a few sentences..." required></textarea>
+				
+					<button type="submit" class="submit-button">Send Application</button>
+				</form> 
+			</div>
+		</main>
+		
+		<footer>
+			<div class="footer-content">
+				<p>&copy; 2026 The Quiet Haven. A safe space for students.</p>
+				<p>Project created by Swan Gridel, Julien Maillet & Anis Tarras-Rhondali — G3S2B</p>
+				<p>Follow us on <a href="https://www.instagram.com/avpd_project/" target="_blank">Instagram</a></p>
+			</div>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,466 @@
+/* ========================================================= */
+/* THE QUIET HAVEN - STYLESHEET                */
+/* ========================================================= */
+
+/* ======================== */
+/* 1. VARIABLES (PALETTE)   */
+/* ======================== */
+:root {
+    --primary-blue: #1A2B4C;   /* Bleu marine profond */
+    --secondary-blue: #7A9CC6; /* Bleu moyen */
+    --pastel-blue: #DCE6F1;    /* Bleu pastel très clair */
+    --bg-light: #F8FAFC;       /* Fond des blocs et champs */
+    --text-dark: #4A4A4A;      /* Gris foncé pour le texte */
+    --text-light: #F0F4F8;     /* Blanc/Gris clair */
+    --glass-bg: rgba(255, 255, 255, 0.90); /* Effet calque blanc */
+}
+
+/* ======================== */
+/* 2. STYLES GLOBAUX        */
+/* ======================== */
+body {
+    margin: 0; 
+    min-height: 100vh; 
+    display: flex; 
+    flex-direction: column; 
+    font-family: sans-serif; 
+    color: var(--text-dark);
+    background-color: var(--pastel-blue); 
+    background-image: url('Image/Fond.jpg'); 
+    background-size: cover; 
+    background-attachment: fixed; 
+    background-position: center;
+}
+
+h1 {
+    font-family: 'Bubblegum Sans', sans-serif;
+    font-size: 2.2rem;
+    margin: 0;
+    font-weight: normal;
+    letter-spacing: 1px;
+    color: var(--primary-blue);
+}
+
+h2 {
+    color: var(--primary-blue);
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+h3 {
+    font-family: 'Bubblegum Sans', sans-serif;
+    color: var(--secondary-blue);
+    font-size: 1.7rem;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    font-family: 'Lora', serif; 
+    line-height: 1.8;
+    text-align: justify;
+}
+
+/* Effet "surligneur" pour les mots en gras */
+p strong {
+    color: var(--primary-blue);
+    font-weight: 700;
+    background-color: rgba(122, 156, 198, 0.15); 
+    padding: 2px 4px; 
+    border-radius: 4px; 
+}
+
+/* ======================== */
+/* 3. EN-TÊTE ET MENU       */
+/* ======================== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 25px;
+    background-color: var(--pastel-blue); 
+    border-radius: 0 0 15px 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06); 
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 15px; 
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s ease; 
+}
+
+header ul li a:hover {
+    color: var(--secondary-blue); 
+}
+
+/* Checkbox cachée utilisée pour le menu mobile */
+.menu-checkbox, .menu-icon {
+    display: none; 
+}
+
+/* ======================== */
+/* 4. COMPOSANTS GLOBAUX    */
+/* ======================== */
+
+/* La carte blanche principale */
+.glass-card {
+    background-color: var(--glass-bg);
+    padding: 35px; 
+    border-radius: 15px; 
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08); 
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Alignement générique pour centrer les cartes */
+.centered-layout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    flex: 1; 
+}
+
+/* Les blocs gris avec barre latérale (Utilisés partout) */
+.content-block {
+    background-color: var(--bg-light); 
+    padding: 20px 25px; 
+    margin-bottom: 25px; 
+    border-left: 4px solid var(--secondary-blue); 
+    border-radius: 8px; 
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); 
+}
+
+.content-block h3 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    color: var(--primary-blue);
+}
+
+.content-block p:first-child {
+    margin-top: 0;
+}
+
+.content-block p:last-child {
+    margin-bottom: 0;
+}
+
+/* ======================== */
+/* BOUTONS ET LIENS         */
+/* ======================== */
+
+/* Base partagée pour tous les boutons */
+.cta-button, .submit-button {
+    display: block;
+    background-color: var(--primary-blue);
+    color: var(--text-light);
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.cta-button:hover, .submit-button:hover {
+    background-color: var(--secondary-blue);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Dimensions spécifiques au bouton de navigation (CTA) */
+.cta-button {
+    padding: 15px 35px;      
+    width: fit-content;      
+    margin: 40px auto 20px;  
+}
+
+/* Modificateur pour les boutons réduits (doit rester sous .cta-button) */
+.cta-inline {
+    display: inline-block;
+    margin: 15px 0 5px 0; 
+    font-size: 1rem;
+    padding: 10px 20px;
+}
+
+/* Liens textuels avec animation au survol */
+.resource-link {
+    color: var(--secondary-blue);
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+    transition: color 0.3s ease; 
+}
+
+.resource-link:hover {
+    color: var(--primary-blue); 
+    text-decoration: underline;
+}
+
+/* ======================== */
+/* LISTES ET IMAGES         */
+/* ======================== */
+
+/* Listes stylisées pour la page Mission */
+.concept-list {
+    list-style: none; 
+    padding-left: 0;
+    margin-top: 20px;
+}
+
+.concept-list li {
+    font-family: 'Lora', serif; 
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    padding: 15px 20px;
+    background-color: var(--bg-light); 
+    border-left: 4px solid var(--secondary-blue); 
+    border-radius: 8px;
+    text-align: justify;
+}
+
+.concept-list li strong:first-child {
+    display: block; 
+    font-family: 'Bubblegum Sans', sans-serif; 
+    font-size: 1.5rem;
+    color: var(--primary-blue);
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+    font-weight: normal; 
+    background: none; 
+    padding: 0;
+}
+
+.concept-list li strong:not(:first-child) {
+    color: var(--primary-blue);
+    font-weight: 700;
+    background-color: rgba(122, 156, 198, 0.15); 
+    padding: 2px 4px; 
+    border-radius: 4px; 
+}
+
+/* Images du site */
+.location-img {
+    width: 100%;
+    max-width: 600px; 
+    height: auto;
+    border-radius: 10px; 
+    margin-top: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+/* ======================== */
+/* 5. PAGE ACCUEIL          */
+/* ======================== */
+.home-layout {
+    display: flex;
+    flex-direction: row; 
+    align-items: flex-start; 
+    gap: 50px; 
+    max-width: 1000px; 
+    margin: 50px auto; 
+    padding: 0 20px;
+}
+
+.poster-section {
+    flex-shrink: 0; 
+    position: sticky; 
+    top: 100px; 
+}
+
+.home-poster {
+    width: 100%;
+    max-width: 350px; 
+    border-radius: 10px; 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); 
+}
+
+.text-section {
+    flex: 1; 
+}
+
+.text-section h2 {
+    text-align: left; 
+}
+
+/* ======================== */
+/* 6. PAGE FORMULAIRE       */
+/* ======================== */
+form > label {
+    display: block; 
+    font-family: 'Bubblegum Sans', sans-serif; 
+    font-size: 1.5rem; 
+    font-weight: normal;
+    color: var(--primary-blue);
+    margin-top: 20px;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%; 
+    padding: 12px;
+    border: 1px solid var(--pastel-blue);
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+    box-sizing: border-box; 
+    background-color: var(--bg-light);
+    transition: border-color 0.3s ease;
+}
+
+form input:focus, form textarea:focus {
+    outline: none;
+    border-color: var(--secondary-blue);
+}
+
+/* Structure Flexbox pour les cases à cocher */
+.checkbox-group {
+    background-color: var(--bg-light); 
+    padding: 15px 20px; 
+    margin-bottom: 20px;
+    border-radius: 8px; 
+    border-left: 4px solid var(--secondary-blue); 
+    display: flex;       
+    flex-wrap: wrap;     
+    gap: 15px 20px;      
+}
+
+.checkbox-item {
+    display: inline-flex;
+    align-items: center; 
+}
+
+.checkbox-item input[type="checkbox"] {
+    margin: 0 8px 0 0; 
+    cursor: pointer;
+}
+
+.checkbox-item label {
+    font-family: sans-serif; 
+    font-size: 1rem;
+    color: var(--text-dark);
+    cursor: pointer;
+    font-weight: normal;
+    margin: 0; 
+}
+
+/* Le bouton d'envoi prend toute la largeur */
+.submit-button {
+    width: 100%;
+    padding: 15px;
+    margin-top: 25px;
+}
+
+/* ======================== */
+/* 7. PIED DE PAGE (FOOTER) */
+/* ======================== */
+footer {
+    background-color: var(--primary-blue); 
+    color: var(--text-light); 
+    text-align: center;
+    padding: 20px 20px; 
+    margin-top: auto; 
+    border-radius: 15px 15px 0 0; 
+    font-size: 8px;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.04); 
+}
+
+.footer-content p {
+    margin: 5px 0;
+    line-height: 1.5;
+    text-align: center; 
+}
+
+.footer-content a {
+    color: var(--secondary-blue); 
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease; 
+}
+
+.footer-content a:hover {
+    color: #FFFFFF; 
+    text-decoration: underline; 
+}
+
+/* ======================== */
+/* 8. RESPONSIVE (MOBILES)  */
+/* ======================== */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+        font-size: 2rem; 
+        cursor: pointer;
+        color: var(--primary-blue); 
+        user-select: none;
+    }
+
+    header ul {
+        display: none; 
+        flex-direction: column; 
+        position: absolute; 
+        top: 90px; 
+        right: 15px;
+        background-color: var(--text-light); 
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+        z-index: 1000; 
+        text-align: right;
+        gap: 15px; 
+    }
+
+    .menu-checkbox:checked ~ nav ul {
+        display: flex;
+    }
+
+    .home-layout {
+        flex-direction: column; 
+        align-items: center; 
+        gap: 30px;
+        margin: 20px auto; 
+    }
+
+    .poster-section {
+        order: -1; 
+    }
+
+    .home-poster {
+        max-width: 250px;
+    }
+}
