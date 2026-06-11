@@ -76,6 +76,11 @@ p strong {
     border-radius: 4px; 
 }
 
+p em {
+    font-size: 0.9rem; 
+    color: var(--primary-blue);
+}
+
 /* ======================== */
 /* 3. EN-TÊTE ET MENU       */
 /* ======================== */
@@ -347,6 +352,28 @@ form textarea {
 form input:focus, form textarea:focus {
     outline: none;
     border-color: var(--secondary-blue);
+}
+
+.content-block ul {
+    font-family: 'Lora', serif; 
+    font-size: 1.1rem;
+    line-height: 1.8;
+    text-align: justify;
+    padding-left: 25px;
+    margin-bottom: 0;
+}
+
+.content-block ul li {
+    margin-bottom: 12px;
+}
+
+/* Applique le même effet surligné aux mots en gras dans les listes */
+.content-block ul li strong {
+    color: var(--primary-blue);
+    font-weight: 700;
+    background-color: rgba(122, 156, 198, 0.15); 
+    padding: 2px 4px; 
+    border-radius: 4px; 
 }
 
 /* Structure Flexbox pour les cases à cocher */

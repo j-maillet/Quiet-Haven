@@ -33,14 +33,23 @@
 		</header>
 		
 		<main class="centered-layout">
-			<div class="glass-card" style="max-width: 600px;">
+			<div class="glass-card" style="max-width: 800px;">
 				<h2>Join the Quiet Haven Team</h2>
 				<p style="text-align: center;">We are always looking for <strong>empathetic students</strong> to help us maintain our safe space.</p>
-				<p style="text-align: center; font-size: 0.95rem; color: var(--secondary-blue); font-style: italic;">
-					No prior experience needed — just a genuine desire to create a welcoming and respectful atmosphere for others.
-				</p>
 
-				<!-- Note: form currently points to a debug endpoint for testing purposes -->
+				<section class="content-block" style="margin-top: 25px;">
+					<h3>What do volunteers do?</h3>
+					<p>
+						You don't need to be a mental health professional to help! Your main role is simply to be a friendly presence and ensure the space remains a <strong>calm and welcoming environment</strong>.
+					</p>
+					<ul style="line-height: 1.8; margin-bottom: 0;">
+						<li><strong>Welcoming participants:</strong> Greeting them gently, showing them around the safe space, and explaining how things work.</li>
+						<li><strong>Offering light support:</strong> Being available to answer questions, listen, or just offer a reassuring presence.</li>
+						<li><strong>Protecting the calm:</strong> Helping to ensure our "no forced interaction" rule and low sensory load are respected.</li>
+						<li><strong>Assisting with activities:</strong> Helping set up quiet reading areas, board games, or creative workshops.</li>
+					</ul>
+				</section>
+
 				<form action="https://perso.liris.cnrs.fr/pierre-antoine.champin/enseignement/intro-web/_static/formproc/debug"> 
 					
 					<label for="firstname">First Name</label>
@@ -80,10 +89,18 @@
 						</div>
 
 						<div class="checkbox-item">
-							<input type="checkbox" id="weekend" name="availability" value="Weekend">
-							<label for="weekend">Weekends</label>
+							<input type="checkbox" id="saturday" name="availability" value="Saturday">
+							<label for="saturday">Saturday</label>
+						</div>
+
+						<div class="checkbox-item">
+							<input type="checkbox" id="sunday" name="availability" value="Sunday">
+							<label for="sunday">Sunday</label>
 						</div>
 					</div>
+					<p>
+						<em>Note: Voluntary work are for the full day.</em>
+					</p>
 
 					<label for="why">Why do you want to help us?</label>
 					<textarea id="why" name="why" rows="4" maxlength="1000" placeholder="Explain in a few sentences..." required></textarea>
